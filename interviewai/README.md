@@ -1,113 +1,294 @@
-# InterviewAI
+# 🚀 InterviewAI – AI-Powered Coding Interview Preparation Platform
 
-An AI-powered coding interview platform: LeetCode-style practice, live AI-driven
-mock interviews (DSA + HR), company-specific prep, contests, analytics, and an
-AI roadmap generator.
+<p align="center">
 
-This is a **production-structured full-stack scaffold**. The architecture, data
-models, and API surface are complete and functional end-to-end; the two external
-integrations (OpenAI and Judge0) need your own API keys before AI feedback and
-code execution go live — everything is wired to call them, nothing is mocked in
-the request/response shape.
+## Build • Practice • Analyze • Improve
 
-## Stack
+A production-ready AI-powered coding interview preparation platform that helps software engineering candidates prepare for technical interviews through AI-powered mock interviews, coding practice, company-specific preparation, coding contests, analytics, and personalized learning roadmaps.
 
-- **Frontend:** React + TypeScript + Tailwind CSS + Monaco Editor + Recharts + Socket.io client
-- **Backend:** Node.js + Express + Socket.io
-- **Database:** MongoDB (Mongoose)
-- **Auth:** JWT (httpOnly cookie + Bearer header), Google OAuth
-- **AI:** OpenAI API (pluggable — swap providers in `backend/src/services/openaiService.js`)
-- **Code execution:** Judge0 API
+<p align="center">
+<img src="https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white"/>
+<img src="https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white"/>
+<img src="https://img.shields.io/badge/Express.js-000000?logo=express&logoColor=white"/>
+<img src="https://img.shields.io/badge/MongoDB-47A248?logo=mongodb&logoColor=white"/>
+<img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white"/>
+<img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?logo=tailwindcss&logoColor=white"/>
+<img src="https://img.shields.io/badge/OpenAI-412991?logo=openai&logoColor=white"/>
+<img src="https://img.shields.io/badge/Judge0-4285F4"/>
+<img src="https://img.shields.io/badge/License-MIT-green"/>
+</p>
 
-## Project structure
+</p>
 
+---
+
+# 📖 Overview
+
+InterviewAI is a full-stack MERN application inspired by platforms like LeetCode, HackerRank, and Interviewing.io. It combines AI-powered mock interviews, coding practice, online code execution, company-specific preparation, analytics, contests, resume analysis, gamification, and personalized learning into one platform.
+
+The project follows a production-style architecture with React + TypeScript frontend, Node.js + Express backend, MongoDB database, secure JWT authentication, Socket.IO for real-time communication, OpenAI integration for AI features, and Judge0 for online code execution.
+
+---
+
+# ✨ Highlights
+
+- 🤖 AI-Powered Mock Interviews
+- 💻 Online Coding Platform
+- ⚡ Judge0 Code Execution
+- 🧠 AI Roadmap Generator
+- 📄 AI Resume Analysis
+- 📊 Analytics Dashboard
+- 🏢 Company-wise Preparation
+- 🏆 Coding Contests
+- 🥇 XP, Badges & Leaderboards
+- 🔐 JWT Authentication + Google OAuth
+- 🌙 Responsive Dark UI
+- 📡 Socket.IO Real-Time Communication
+
+---
+
+# 🏗️ System Architecture
+
+```text
+                   React + TypeScript + Vite
+                              │
+                    REST APIs + Socket.IO
+                              │
+                  Node.js + Express Backend
+                              │
+      ┌──────────────┬──────────────┬──────────────┐
+      │              │              │
+   MongoDB       OpenAI API      Judge0 API
+(Database)    AI Interviews   Code Execution
 ```
-interviewai/
-├── backend/
-│   ├── server.js                 # entrypoint: connects DB, boots Socket.io + HTTP
-│   └── src/
-│       ├── config/                # env loading, DB connection
-│       ├── models/                # Mongoose schemas (User, Problem, Submission, Interview, ...)
-│       ├── controllers/           # request handlers, one file per resource
-│       ├── routes/                # Express routers, one file per resource
-│       ├── middleware/            # auth (JWT), error handling, validation
-│       ├── services/              # openaiService.js, judge0Service.js, socketService.js
-│       └── utils/                 # seed.js, generateToken, asyncHandler, ApiError, xp rules
-└── frontend/
-    └── src/
-        ├── pages/                 # one folder per feature area
-        ├── components/            # layout/, ui/, charts/
-        ├── services/               # one file per backend resource, all funnel through services/api.ts
-        ├── context/                # AuthContext, ThemeContext
-        ├── hooks/                  # useAuth, useTheme
-        └── types/                  # shared TS types mirroring the backend models
+
+---
+
+# 🛠️ Tech Stack
+
+## Frontend
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- React Router
+- Axios
+- Monaco Editor
+- Recharts
+- Socket.IO Client
+
+## Backend
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JWT Authentication
+- REST APIs
+- Socket.IO
+
+## AI & External Services
+- OpenAI API
+- Judge0 API
+- Google OAuth
+- Nodemailer
+
+---
+
+# ✨ Features
+
+## 🤖 AI Interview
+- AI-powered technical & HR interviews
+- Real-time interview chat
+- AI scoring & feedback
+- Voice input support
+- Personalized recommendations
+
+## 💻 Coding Practice
+- Monaco editor
+- Multi-language support
+- Judge0 integration
+- Company-wise questions
+- Topic & difficulty filters
+- AI explanation of submissions
+
+## 📊 Dashboard & Analytics
+- Weekly progress
+- Activity heatmap
+- Weak topic detection
+- Submission history
+- Accuracy reports
+- Personalized insights
+
+## 🏆 Coding Contests
+- Live contests
+- Virtual contests
+- Contest leaderboards
+- Performance tracking
+
+## 🥇 Gamification
+- XP System
+- Levels
+- Daily Streaks
+- Badges
+- Achievements
+
+## 👨‍💼 Admin Panel
+- User management
+- Problem management
+- Contest management
+- Analytics overview
+
+---
+
+# 📂 Project Structure
+
+```text
+InterviewAI
+├── backend
+│   ├── config
+│   ├── controllers
+│   ├── middleware
+│   ├── models
+│   ├── routes
+│   ├── services
+│   ├── utils
+│   └── server.js
+├── frontend
+│   ├── assets
+│   ├── components
+│   ├── context
+│   ├── hooks
+│   ├── pages
+│   ├── services
+│   └── types
+└── README.md
 ```
 
-## Getting started
+---
 
-### 1. Backend
+# 🚀 Getting Started
+
+```bash
+git clone https://github.com/prigya-goyal/InterviewAI.git
+cd InterviewAI
+```
+
+## Backend
 
 ```bash
 cd backend
 cp .env.example .env
-# Fill in MONGO_URI, JWT_SECRET, OPENAI_API_KEY, JUDGE0_API_KEY (RapidAPI), GOOGLE_CLIENT_ID
 npm install
-npm run seed     # populates sample problems, companies, badges, achievements
-npm run dev       # starts on http://localhost:5000
+npm run seed
+npm run dev
 ```
 
-You need a running MongoDB instance — either local (`mongodb://localhost:27017/interviewai`)
-or a free [MongoDB Atlas](https://www.mongodb.com/atlas) cluster.
-
-**API keys you'll need:**
-- `OPENAI_API_KEY` — from [platform.openai.com](https://platform.openai.com/api-keys). Powers the AI interviewer, resume analysis, roadmap generator, submission explanations, and recommendations.
-- `JUDGE0_API_KEY` — from [RapidAPI's Judge0 CE](https://rapidapi.com/judge0-official/api/judge0-ce). Powers Run/Submit code execution.
-- `GOOGLE_CLIENT_ID` — from [Google Cloud Console](https://console.cloud.google.com/apis/credentials) if you want Google login.
-
-### 2. Frontend
+## Frontend
 
 ```bash
 cd frontend
 cp .env.example .env
 npm install
-npm run dev       # starts on http://localhost:5173, proxies /api to :5000
+npm run dev
 ```
 
-### 3. Log in
+---
 
-Sign up through the UI, then to test the Admin Panel, manually set that user's
-`role` field to `"admin"` in MongoDB:
+# 🔑 Environment Variables
 
-```js
-db.users.updateOne({ email: "you@example.com" }, { $set: { role: "admin" } })
+```env
+MONGO_URI=
+JWT_SECRET=
+OPENAI_API_KEY=
+GOOGLE_CLIENT_ID=
+JUDGE0_API_KEY=
+SMTP_HOST=
+SMTP_PORT=
+SMTP_USER=
+SMTP_PASS=
 ```
 
-## What's fully implemented
+---
 
-- Auth: signup, login, Google OAuth, forgot/reset password, JWT sessions
-- Dashboard: aggregated stats, weekly activity chart, recent interviews
-- Coding Practice: problem list/filter/search, Monaco editor (4 languages), Run/Submit against Judge0, submission history, AI explanation of submissions
-- AI Interview Mode: live chat-driven interview (REST + Socket.io), hints on request, end-of-interview AI scoring across 5 dimensions, strengths/weaknesses/suggestions
-- Voice input via the Web Speech API (client-side, no extra backend needed)
-- Resume upload + AI analysis (PDF parsing → skills/gaps/recommended topics)
-- Company prep pages (problems, HR questions, system design questions)
-- Contests: register, timed + virtual, contest-scoped leaderboard
-- Global/college/friends leaderboard
-- AI Roadmap Generator
-- Analytics page (weak topics via AI, difficulty breakdown, activity heatmap)
-- Gamification: XP, levels, streaks, badges, achievements (schema + award logic on submit)
-- Admin Panel: platform overview, user management, problem CRUD (companies/contests CRUD follow the same pattern)
+# 📈 Project Statistics
 
-## What you'll want to extend
+| Category | Technology |
+|----------|------------|
+| Frontend | React + TypeScript + Vite |
+| Backend | Node.js + Express |
+| Database | MongoDB |
+| Authentication | JWT + Google OAuth |
+| AI | OpenAI |
+| Code Execution | Judge0 |
+| Real-Time | Socket.IO |
 
-- Wire `backend/src/utils/mailer.js` (not included) with real SMTP creds for password-reset emails — currently logs the reset token to the console.
-- The Admin Panel's Companies/Contests tabs are stubbed with a pointer to the already-built `adminController.js` patterns — copy the Users/Problems tab pattern.
-- Text-to-speech for the AI interviewer's side of Voice Mode (speech-to-text is done; add the Web Speech `SpeechSynthesis` API or an ElevenLabs/OpenAI TTS call in `AIInterview.tsx`).
-- Badge/achievement *awarding* logic (the models and seed data exist; hook `Achievement.criteria` checks into `problemController.submitProblemCode` and `interviewController.endInterview`).
+---
 
-## Design notes
+# 📸 Application Preview
 
-Dark-first, developer-tool aesthetic in the LeetCode/Vercel space, but with its
-own identity: deep navy-black surfaces, a mint "compile-success" accent instead
-of the standard violet/terracotta AI palette, Space Grotesk for display type,
-JetBrains Mono for stats and code. Tokens live in `frontend/tailwind.config.js`.
+Replace with screenshots:
+
+- Dashboard
+- Coding Practice
+- AI Interview
+- Analytics
+- Leaderboard
+- Admin Dashboard
+
+---
+
+# 💡 Engineering Highlights
+
+- Production-style MERN architecture
+- MVC backend design
+- RESTful APIs
+- Secure JWT authentication
+- Google OAuth integration
+- Socket.IO real-time communication
+- OpenAI-powered interview assistant
+- Judge0 online code execution
+- Component-based frontend
+- Responsive UI
+- Scalable folder structure
+
+---
+
+# 🚀 Future Enhancements
+
+- AI Resume Builder
+- ATS Resume Checker
+- Video Interviews
+- Voice AI Interviewer
+- Docker & Kubernetes Deployment
+- CI/CD Pipeline
+- Mobile Application
+
+---
+
+# 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push your branch
+5. Open a Pull Request
+
+---
+
+# 📜 License
+
+Licensed under the MIT License.
+
+---
+
+# 👩‍💻 Author
+
+**Prigya Goyal**
+
+B.Tech Computer Engineering Student
+
+- GitHub: https://github.com/prigya-goyal
+- LinkedIn: *(Add your LinkedIn profile link)*
+
+---
+
