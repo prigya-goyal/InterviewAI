@@ -1,72 +1,185 @@
-#  InterviewAI – AI-Powered Coding Interview Preparation Platform
+# 🚀 InterviewAI – AI-Powered Coding Interview Preparation Platform
 
 <p align="center">
 
-## Build • Practice • Analyze • Improve
+### Build • Practice • Analyze • Improve
 
-A production-ready AI-powered coding interview preparation platform that helps software engineering candidates prepare for technical interviews through AI-powered mock interviews, coding practice, company-specific preparation, coding contests, analytics, and personalized learning roadmaps.
+A production-ready AI-powered coding interview preparation platform that helps software engineering candidates master technical interviews through AI-driven mock interviews, coding practice, company-specific preparation, contests, analytics, and personalized learning roadmaps.
 
-<p align="center">
-<img src="https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white"/>
-<img src="https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white"/>
-<img src="https://img.shields.io/badge/Express.js-000000?logo=express&logoColor=white"/>
-<img src="https://img.shields.io/badge/MongoDB-47A248?logo=mongodb&logoColor=white"/>
-<img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white"/>
-<img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?logo=tailwindcss&logoColor=white"/>
-<img src="https://img.shields.io/badge/OpenAI-412991?logo=openai&logoColor=white"/>
-<img src="https://img.shields.io/badge/Judge0-4285F4"/>
-<img src="https://img.shields.io/badge/License-MIT-green"/>
-</p>
+**Built with React, Node.js, Express, MongoDB, OpenAI API, Judge0, Socket.IO, and TypeScript.**
 
 </p>
 
 ---
 
-#  Overview
+# 📖 Overview
 
-InterviewAI is a full-stack MERN application inspired by platforms like LeetCode, HackerRank, and Interviewing.io. It combines AI-powered mock interviews, coding practice, online code execution, company-specific preparation, analytics, contests, resume analysis, gamification, and personalized learning into one platform.
+InterviewAI is a full-stack coding interview preparation platform inspired by modern interview ecosystems such as **LeetCode**, **HackerRank**, and **Interviewing.io**. It combines an online coding environment, AI-powered interview simulation, real-time performance analytics, coding contests, gamification, and personalized learning into a single platform.
 
-The project follows a production-style architecture with React + TypeScript frontend, Node.js + Express backend, MongoDB database, secure JWT authentication, Socket.IO for real-time communication, OpenAI integration for AI features, and Judge0 for online code execution.
+The project follows a scalable production-style architecture with separate frontend and backend applications, secure JWT authentication, RESTful APIs, real-time communication using Socket.IO, MongoDB for data persistence, and integrations with OpenAI and Judge0 APIs.
 
 ---
 
-#  Highlights
+# ✨ Highlights
 
 - 🤖 AI-Powered Mock Interviews
-- 💻 Online Coding Platform
-- ⚡ Judge0 Code Execution
+- 💻 Online Code Editor with Judge0 Integration
+- 📊 Advanced Performance Analytics
+- 🏢 Company-Specific Interview Preparation
+- 🏆 Coding Contests & Leaderboards
 - 🧠 AI Roadmap Generator
 - 📄 AI Resume Analysis
-- 📊 Analytics Dashboard
-- 🏢 Company-wise Preparation
-- 🏆 Coding Contests
-- 🥇 XP, Badges & Leaderboards
-- 🔐 JWT Authentication + Google OAuth
+- 🔐 Secure JWT Authentication
 - 🌙 Responsive Dark UI
-- 📡 Socket.IO Real-Time Communication
+- ⚡ Real-Time Communication using Socket.IO
+
+ ---
+
+# ✨ Features
+
+## 🤖 AI Interview Assistant
+
+- AI-powered technical & HR mock interviews
+- Interactive interview chat
+- AI-generated interview evaluation
+- Strengths & weaknesses analysis
+- Personalized improvement suggestions
+- Voice input support using Web Speech API
+- Real-time interview experience with Socket.IO
 
 ---
 
-#  System Architecture
+## 💻 Coding Practice
+
+- Monaco-powered online code editor
+- Multi-language code execution
+- Judge0 API integration
+- Company-specific coding questions
+- Topic-wise & difficulty-wise filtering
+- Submission history
+- AI explanation for submitted solutions
+
+---
+
+## 📊 Dashboard
+
+- Problems solved tracker
+- Interview statistics
+- Accuracy tracking
+- Daily streak system
+- Weekly progress analytics
+- Personalized recommendations
+
+---
+
+## 📈 Analytics
+
+- Performance visualization
+- Submission history
+- Difficulty breakdown
+- Weak topic analysis
+- Activity heatmap
+- AI-generated learning insights
+
+---
+
+## 🛣️ AI Roadmap Generator
+
+- Personalized learning roadmap
+- Skill gap analysis
+- Topic recommendations
+- Structured interview preparation
+
+---
+
+## 🏢 Company Preparation
+
+- Company-wise coding questions
+- HR interview questions
+- System Design interview preparation
+- Curated interview roadmaps
+
+---
+
+## 🏆 Coding Contests
+
+- Participate in coding contests
+- Contest registration
+- Live rankings
+- Contest leaderboards
+- Performance evaluation
+
+---
+
+## 🥇 Gamification
+
+- XP System
+- Levels
+- Daily Streaks
+- Badges
+- Achievements
+- Global Leaderboard
+
+---
+
+## 👨‍💼 Admin Dashboard
+
+- User Management
+- Problem Management
+- Contest Management
+- Analytics Overview
+- CRUD Operations
+
+---
+
+## 🔐 Authentication & Security
+
+- JWT Authentication
+- Google OAuth Login
+- Secure Cookies
+- Password Reset
+- Protected Routes
+- Role-Based Authorization
+
+---
+
+## 🌙 User Experience
+
+- Responsive Design
+- Dark Theme
+- Modern Dashboard
+- Fast Search
+- Clean UI
+- Mobile Friendly
+
+---
+
+# 🏗️ System Architecture
 
 ```text
-                   React + TypeScript + Vite
-                              │
-                    REST APIs + Socket.IO
-                              │
-                  Node.js + Express Backend
-                              │
-      ┌──────────────┬──────────────┬──────────────┐
-      │              │              │
-   MongoDB       OpenAI API      Judge0 API
-(Database)    AI Interviews   Code Execution
+                   ┌────────────────────────────┐
+                   │      React + Vite UI       │
+                   └─────────────┬──────────────┘
+                                 │
+                   REST APIs + Socket.IO
+                                 │
+                ┌────────────────▼────────────────┐
+                │      Express.js Backend         │
+                └────────────────┬────────────────┘
+                                 │
+       ┌──────────────┬──────────┴───────────┬──────────────┐
+       │              │                      │              │
+       ▼              ▼                      ▼              ▼
+   MongoDB        OpenAI API            Judge0 API      Google OAuth
+(Database)     AI Interviewer       Code Execution    Authentication
 ```
 
 ---
 
-#  Tech Stack
+# 🛠️ Tech Stack
 
 ## Frontend
+
 - React
 - TypeScript
 - Vite
@@ -77,16 +190,22 @@ The project follows a production-style architecture with React + TypeScript fron
 - Recharts
 - Socket.IO Client
 
+---
+
 ## Backend
+
 - Node.js
 - Express.js
 - MongoDB
 - Mongoose
 - JWT Authentication
-- REST APIs
 - Socket.IO
+- REST APIs
+
+---
 
 ## AI & External Services
+
 - OpenAI API
 - Judge0 API
 - Google OAuth
@@ -94,56 +213,27 @@ The project follows a production-style architecture with React + TypeScript fron
 
 ---
 
-#  Features
+# 📈 Project Statistics
 
-## 🤖 AI Interview
-- AI-powered technical & HR interviews
-- Real-time interview chat
-- AI scoring & feedback
-- Voice input support
-- Personalized recommendations
-
-## 💻 Coding Practice
-- Monaco editor
-- Multi-language support
-- Judge0 integration
-- Company-wise questions
-- Topic & difficulty filters
-- AI explanation of submissions
-
-## 📊 Dashboard & Analytics
-- Weekly progress
-- Activity heatmap
-- Weak topic detection
-- Submission history
-- Accuracy reports
-- Personalized insights
-
-## 🏆 Coding Contests
-- Live contests
-- Virtual contests
-- Contest leaderboards
-- Performance tracking
-
-## 🥇 Gamification
-- XP System
-- Levels
-- Daily Streaks
-- Badges
-- Achievements
-
-## 👨‍💼 Admin Panel
-- User management
-- Problem management
-- Contest management
-- Analytics overview
+| Category | Details |
+|----------|---------|
+| Architecture | Full Stack MERN |
+| Frontend | React + TypeScript |
+| Backend | Node.js + Express |
+| Database | MongoDB |
+| Authentication | JWT + Google OAuth |
+| AI Integration | OpenAI API |
+| Code Execution | Judge0 API |
+| Real-Time | Socket.IO |
+| UI | Tailwind CSS |
 
 ---
 
-#  Project Structure
+# 📂 Project Structure
 
 ```text
 InterviewAI
+│
 ├── backend
 │   ├── config
 │   ├── controllers
@@ -153,6 +243,7 @@ InterviewAI
 │   ├── services
 │   ├── utils
 │   └── server.js
+│
 ├── frontend
 │   ├── assets
 │   ├── components
@@ -160,30 +251,52 @@ InterviewAI
 │   ├── hooks
 │   ├── pages
 │   ├── services
-│   └── types
+│   ├── types
+│   └── App.tsx
+│
 └── README.md
 ```
 
 ---
 
-#  Getting Started
+# 🚀 Getting Started
+
+## 1️⃣ Clone Repository
 
 ```bash
 git clone https://github.com/prigya-goyal/InterviewAI.git
 cd InterviewAI
 ```
 
-## Backend
+---
+
+## 2️⃣ Backend Setup
 
 ```bash
 cd backend
 cp .env.example .env
+
+# Configure your environment variables:
+# MONGO_URI
+# JWT_SECRET
+# OPENAI_API_KEY
+# GOOGLE_CLIENT_ID
+# JUDGE0_API_KEY
+
 npm install
 npm run seed
 npm run dev
 ```
 
-## Frontend
+Backend runs on:
+
+```
+http://localhost:5000
+```
+
+---
+
+## 3️⃣ Frontend Setup
 
 ```bash
 cd frontend
@@ -192,16 +305,45 @@ npm install
 npm run dev
 ```
 
+Frontend runs on:
+
+```
+http://localhost:5173
+```
+
 ---
 
-#  Environment Variables
+## 4️⃣ Admin Access
+
+After creating an account, update the user's role inside MongoDB:
+
+```javascript
+db.users.updateOne(
+  { email: "you@example.com" },
+  { $set: { role: "admin" } }
+)
+```
+
+---
+
+# 🔑 Environment Variables
+
+Create a `.env` file inside the backend directory.
 
 ```env
+NODE_ENV=development
+PORT=5000
+
 MONGO_URI=
+
 JWT_SECRET=
-OPENAI_API_KEY=
+
 GOOGLE_CLIENT_ID=
+
+OPENAI_API_KEY=
+
 JUDGE0_API_KEY=
+
 SMTP_HOST=
 SMTP_PORT=
 SMTP_USER=
@@ -210,85 +352,154 @@ SMTP_PASS=
 
 ---
 
-#  Project Statistics
+# ✅ Implemented Features
 
-| Category | Technology |
-|----------|------------|
-| Frontend | React + TypeScript + Vite |
-| Backend | Node.js + Express |
-| Database | MongoDB |
-| Authentication | JWT + Google OAuth |
-| AI | OpenAI |
-| Code Execution | Judge0 |
-| Real-Time | Socket.IO |
+✔ JWT Authentication
 
----
+✔ Google OAuth Login
 
-#  Application Preview
+✔ AI Mock Interviews
 
-Replace with screenshots:
+✔ Coding Practice Platform
 
-- Dashboard
-- Coding Practice
-- AI Interview
-- Analytics
-- Leaderboard
-- Admin Dashboard
+✔ Judge0 Code Execution
 
----
+✔ AI Code Explanation
 
-#  Engineering Highlights
+✔ Resume Analysis
 
-- Production-style MERN architecture
-- MVC backend design
-- RESTful APIs
-- Secure JWT authentication
-- Google OAuth integration
-- Socket.IO real-time communication
-- OpenAI-powered interview assistant
-- Judge0 online code execution
-- Component-based frontend
-- Responsive UI
-- Scalable folder structure
+✔ Company Preparation
+
+✔ Coding Contests
+
+✔ Analytics Dashboard
+
+✔ AI Roadmap Generator
+
+✔ XP & Achievement System
+
+✔ Leaderboards
+
+✔ Admin Dashboard
+
+✔ Dark Theme
+
+✔ Responsive Design
+
+✔ Real-Time Communication using Socket.IO
 
 ---
 
-#  Future Enhancements
+# 💡 Engineering Highlights
+
+- Modular MERN Architecture
+- RESTful API Design
+- MVC Backend Architecture
+- Component-Based Frontend
+- Secure JWT Authentication
+- Protected Routes
+- Socket.IO Real-Time Communication
+- Environment-Based Configuration
+- Clean Folder Structure
+- Scalable Codebase
+
+---
+
+# 📸 Application Preview
+
+## Dashboard
+
+> *(Add Screenshot Here)*
+
+---
+
+## Coding Practice
+
+> *(Add Screenshot Here)*
+
+---
+
+## AI Interview
+
+> *(Add Screenshot Here)*
+
+---
+
+## Analytics
+
+> *(Add Screenshot Here)*
+
+---
+
+## Leaderboard
+
+> *(Add Screenshot Here)*
+
+---
+
+## Admin Dashboard
+
+> *(Add Screenshot Here)*
+
+---
+
+# 🚀 Future Enhancements
 
 - AI Resume Builder
 - ATS Resume Checker
-- Video Interviews
-- Voice AI Interviewer
-- Docker & Kubernetes Deployment
+- Voice-Based AI Interviewer
+- Video Interview Simulation
+- AI Career Coach
+- Docker Deployment
 - CI/CD Pipeline
+- Kubernetes Deployment
 - Mobile Application
+- Microservices Architecture
 
 ---
 
-#  Contributing
+# 🤝 Contributing
+
+Contributions are welcome!
 
 1. Fork the repository
-2. Create a feature branch
+2. Create your feature branch
+
+```bash
+git checkout -b feature-name
+```
+
 3. Commit your changes
-4. Push your branch
+
+```bash
+git commit -m "Add new feature"
+```
+
+4. Push to GitHub
+
+```bash
+git push origin feature-name
+```
+
 5. Open a Pull Request
 
 ---
 
-#  License
+# 📜 License
 
-Licensed under the MIT License.
+This project is licensed under the MIT License.
 
 ---
 
-#  Author
+# 👩‍💻 Author
 
-**Prigya Goyal**
+## Prigya Goyal
 
-B.Tech Computer Engineering Student
+**B.Tech Computer Engineering Student**
 
-- GitHub: https://github.com/prigya-goyal
-- LinkedIn: https://www.linkedin.com/in/prigya-goyal-95aa79286/
+GitHub: https://github.com/prigya-goyal
+
+LinkedIn: https://www.linkedin.com/in/prigya-goyal-95aa79286/
 
 ---
 
