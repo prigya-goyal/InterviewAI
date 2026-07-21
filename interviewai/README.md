@@ -1,4 +1,4 @@
-# 🚀 InterviewAI – AI-Powered Coding Interview Preparation Platform
+#  InterviewAI – AI-Powered Coding Interview Preparation Platform
 
 <p align="center">
 
@@ -22,7 +22,7 @@ A production-ready AI-powered coding interview preparation platform that helps s
 
 ---
 
-# 📖 Overview
+#  Overview
 
 InterviewAI is a full-stack MERN application inspired by platforms like LeetCode, HackerRank, and Interviewing.io. It combines AI-powered mock interviews, coding practice, online code execution, company-specific preparation, analytics, contests, resume analysis, gamification, and personalized learning into one platform.
 
@@ -30,7 +30,7 @@ The project follows a production-style architecture with React + TypeScript fron
 
 ---
 
-# ✨ Highlights
+#  Highlights
 
 - 🤖 AI-Powered Mock Interviews
 - 💻 Online Coding Platform
@@ -47,7 +47,7 @@ The project follows a production-style architecture with React + TypeScript fron
 
 ---
 
-# 🏗️ System Architecture
+#  System Architecture
 
 ```text
                    React + TypeScript + Vite
@@ -64,7 +64,7 @@ The project follows a production-style architecture with React + TypeScript fron
 
 ---
 
-# 🛠️ Tech Stack
+#  Tech Stack
 
 ## Frontend
 - React
@@ -94,7 +94,7 @@ The project follows a production-style architecture with React + TypeScript fron
 
 ---
 
-# ✨ Features
+#  Features
 
 ## 🤖 AI Interview
 - AI-powered technical & HR interviews
@@ -140,7 +140,7 @@ The project follows a production-style architecture with React + TypeScript fron
 
 ---
 
-# 📂 Project Structure
+#  Project Structure
 
 ```text
 InterviewAI
@@ -166,7 +166,7 @@ InterviewAI
 
 ---
 
-# 🚀 Getting Started
+#  Getting Started
 
 ```bash
 git clone https://github.com/prigya-goyal/InterviewAI.git
@@ -194,7 +194,7 @@ npm run dev
 
 ---
 
-# 🔑 Environment Variables
+#  Environment Variables
 
 ```env
 MONGO_URI=
@@ -210,7 +210,7 @@ SMTP_PASS=
 
 ---
 
-# 📈 Project Statistics
+#  Project Statistics
 
 | Category | Technology |
 |----------|------------|
@@ -224,7 +224,7 @@ SMTP_PASS=
 
 ---
 
-# 📸 Application Preview
+#  Application Preview
 
 Replace with screenshots:
 
@@ -237,7 +237,7 @@ Replace with screenshots:
 
 ---
 
-# 💡 Engineering Highlights
+#  Engineering Highlights
 
 - Production-style MERN architecture
 - MVC backend design
@@ -253,7 +253,7 @@ Replace with screenshots:
 
 ---
 
-# 🚀 Future Enhancements
+#  Future Enhancements
 
 - AI Resume Builder
 - ATS Resume Checker
@@ -265,7 +265,7 @@ Replace with screenshots:
 
 ---
 
-# 🤝 Contributing
+#  Contributing
 
 1. Fork the repository
 2. Create a feature branch
@@ -275,20 +275,20 @@ Replace with screenshots:
 
 ---
 
-# 📜 License
+#  License
 
 Licensed under the MIT License.
 
 ---
 
-# 👩‍💻 Author
+#  Author
 
 **Prigya Goyal**
 
 B.Tech Computer Engineering Student
 
 - GitHub: https://github.com/prigya-goyal
-- LinkedIn: *(Add your LinkedIn profile link)*
+- LinkedIn: https://www.linkedin.com/in/prigya-goyal-95aa79286/
 
 ---
 
