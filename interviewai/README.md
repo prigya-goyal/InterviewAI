@@ -407,39 +407,35 @@ SMTP_PASS=
 
 # 📸 Application Preview
 
-## Dashboard
+### 🔐 Login
+![](images/login.png)
 
-> *(Add Screenshot Here)*
+### 🏠 Dashboard
+![](images/dashboard.png)
 
----
+### 💻 Coding Practice
+![](images/coding-practice.png)
 
-## Coding Practice
+### 🤖 AI Interview
+![](images/ai-interview.png)
 
-> *(Add Screenshot Here)*
+### 📊 Analytics
+![](images/analytics.png)
 
----
+### 🏢 Companies
+![](images/companies.png)
 
-## AI Interview
+### 🏆 Coding Contests
+![](images/contests.png)
 
-> *(Add Screenshot Here)*
+### 🥇 Leaderboard
+![](images/leaderboard.png)
 
----
+### 🗺️ AI Roadmap
+![](images/roadmap.png)
 
-## Analytics
-
-> *(Add Screenshot Here)*
-
----
-
-## Leaderboard
-
-> *(Add Screenshot Here)*
-
----
-
-## Admin Dashboard
-
-> *(Add Screenshot Here)*
+### ⚙️ Admin Panel
+![](images/admin-panel.png)
 
 ---
 
