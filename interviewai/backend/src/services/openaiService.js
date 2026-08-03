@@ -73,8 +73,8 @@ Please walk me through your high-level approach before writing any code.`;
     }
 
     // 2. Negative / Stuck / Don't know
-    const negativeWords = ['no', 'idk', 'dont know', "don't know", 'not sure', 'confused', 'stuck', 'hard', 'cannot', 'cant', "can't", 'no approach', 'nothing'];
-    if (negativeWords.includes(lastMsg) || negativeWords.some((w) => lastMsg.startsWith(w) && lastMsg.length < 20)) {
+    const negativeWords = ['no', 'idk', 'dont know', "don't know", 'not sure', 'confused', 'stuck', 'hard', 'cannot', 'cant', "can't", 'no approach', 'nothing', 'not know'];
+    if (negativeWords.some((w) => lastMsg.includes(w) && lastMsg.length < 30)) {
       return "No problem! If you are stuck or unsure, feel free to ask for a hint (by clicking 'Ask for a hint' below or saying 'hint'), and we can work through it together. Alternatively, let me know if you would like me to explain the basic idea.";
     }
 
@@ -345,8 +345,8 @@ after each candidate answer give brief constructive feedback before moving to th
     const lastMsg = (candidateInput || '').trim().toLowerCase();
 
     // Stuck / negative
-    const negativeWords = ['no', 'idk', 'dont know', "don't know", 'not sure', 'confused', 'stuck', 'nothing'];
-    if (negativeWords.includes(lastMsg) || negativeWords.some((w) => lastMsg.startsWith(w) && lastMsg.length < 15)) {
+    const negativeWords = ['no', 'idk', 'dont know', "don't know", 'not sure', 'confused', 'stuck', 'nothing', 'not know'];
+    if (negativeWords.some((w) => lastMsg.includes(w) && lastMsg.length < 30)) {
       return "No worries. Interviews can be intimidating! We can take it one step at a time. Tell me about a project you are proud of—even a small academic project. What did you build?";
     }
 
@@ -396,8 +396,8 @@ async function getSystemDesignInterviewerTurn({ transcript, candidateInput }) {
     const lastMsg = (candidateInput || '').trim().toLowerCase();
 
     // Stuck / negative
-    const negativeWords = ['no', 'idk', 'dont know', "don't know", 'not sure', 'confused', 'stuck', 'hard', 'cannot', 'cant', "can't", 'nothing'];
-    if (negativeWords.includes(lastMsg) || negativeWords.some((w) => lastMsg.startsWith(w) && lastMsg.length < 15)) {
+    const negativeWords = ['no', 'idk', 'dont know', "don't know", 'not sure', 'confused', 'stuck', 'hard', 'cannot', 'cant', "can't", 'nothing', 'not know'];
+    if (negativeWords.some((w) => lastMsg.includes(w) && lastMsg.length < 30)) {
       return "No problem! Let's break it down together. For a URL shortener, functional requirements include: generating a short URL from a long URL, and redirecting a short URL to the long URL. Can you outline the scale or read/write ratio we should design for?";
     }
 

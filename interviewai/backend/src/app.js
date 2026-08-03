@@ -22,7 +22,39 @@ const adminRoutes = require('./routes/adminRoutes');
 const app = express();
 
 // --- Core middleware ---
-app.use(helmet());
+app.use(
+  helmet({
+    contentSecurityPolicy: {
+      directives: {
+        defaultSrc: ["'self'"],
+        scriptSrc: [
+          "'self'",
+          "'unsafe-inline'",
+          "'unsafe-eval'",
+          "https://cdn.jsdelivr.net",
+          "https://cdnjs.cloudflare.com",
+        ],
+        styleSrc: [
+          "'self'",
+          "'unsafe-inline'",
+          "https://fonts.googleapis.com",
+          "https://cdn.jsdelivr.net",
+          "https://cdnjs.cloudflare.com",
+        ],
+        fontSrc: ["'self'", "https://fonts.gstatic.com", "data:"],
+        imgSrc: ["'self'", "data:", "https:"],
+        connectSrc: [
+          "'self'",
+          "http://localhost:5000",
+          "ws://localhost:5000",
+          "wss:",
+          "https:",
+        ],
+        workerSrc: ["'self'", "blob:"],
+      },
+    },
+  })
+);
 
 const allowedOrigins = [
   CLIENT_URL,
