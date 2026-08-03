@@ -74,6 +74,21 @@ app.use('/api/leaderboard', leaderboardRoutes);
 app.use('/api/ai', aiRoutes);
 app.use('/api/admin', adminRoutes);
 
+// --- Static assets serving for production ---
+const path = require('path');
+const fs = require('fs');
+const distPath = path.join(__dirname, '../../frontend/dist');
+
+if (fs.existsSync(distPath)) {
+  app.use(express.static(distPath));
+  app.get('*', (req, res, next) => {
+    if (req.path.startsWith('/api')) {
+      return next();
+    }
+    res.sendFile(path.join(distPath, 'index.html'));
+  });
+}
+
 // --- Error handling (must be last) ---
 app.use(notFound);
 app.use(errorHandler);

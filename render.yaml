@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: interviewai
+    env: node
+    plan: free
+    buildCommand: npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+      - key: MONGO_URI
+        sync: false # You will input your MongoDB Atlas Connection URI here
+      - key: JWT_SECRET
+        generateValue: true # Render will automatically generate a secure random JWT secret
+      - key: OPENAI_API_KEY
+        sync: false # You will input your OpenAI API Key here
+      - key: JUDGE0_API_URL
+        value: https://judge0-ce.p.rapidapi.com
+      - key: JUDGE0_API_KEY
+        sync: false # Optional: input your RapidAPI Judge0 API Key here
+      - key: JUDGE0_API_HOST
+        value: judge0-ce.p.rapidapi.com

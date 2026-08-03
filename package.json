@@ -1,0 +1,16 @@
+{
+  "name": "interviewai-monorepo",
+  "version": "1.0.0",
+  "description": "InterviewAI Root Monorepo Orchestration",
+  "main": "interviewai/backend/server.js",
+  "scripts": {
+    "install:backend": "npm install --prefix interviewai/backend",
+    "install:frontend": "npm install --prefix interviewai/frontend",
+    "build:frontend": "npm run build --prefix interviewai/frontend",
+    "build": "npm run install:backend && npm run install:frontend && npm run build:frontend",
+    "start": "npm start --prefix interviewai/backend"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
