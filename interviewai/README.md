@@ -1,5 +1,10 @@
 # 🚀 InterviewAI – AI-Powered Coding Interview Preparation Platform
 
+
+> A full-stack AI-powered interview preparation platform.
+
+🔗 **Live Demo:** [InterviewAI](https://interviewai-p7fm.onrender.com/)
+
 <p align="center">
 
 ### Build • Practice • Analyze • Improve
